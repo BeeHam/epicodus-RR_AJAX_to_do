@@ -9,5 +9,10 @@ class ListsController < ApplicationController
     render :show
   end
 
+  def new
+    @list = List.new
+    render :new
+  end
+
 
 end
