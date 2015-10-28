@@ -38,6 +38,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'launchy'
   gem 'pry'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
 end
 
 group :development do
@@ -51,4 +53,7 @@ end
 
 group :test do
   gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'simplecov', require: false
 end
