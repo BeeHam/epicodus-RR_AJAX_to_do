@@ -1,6 +1,6 @@
 <%= render('layouts/errors', :object => @task) %>
 
-<%= form_for [@list, @task] do |f| %>
+<%= form_for [@list, @task], id: "new_task", remote: true do |f| %>
   <%= f.label :description %>
   <%= f.text_field :description %>
   <%= f.submit %>

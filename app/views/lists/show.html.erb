@@ -1,9 +1,9 @@
 <h1><%= @list.name %></h1>
 
-<% if @list.tasks.any? %>
 <h4> Here are the tasks for this list:</h4>
 
-<ul>
+<ul id="tasks">
+<% if @list.tasks.any? %>
   <% @list.tasks.each do |task| %>
   <li>
 
@@ -17,15 +17,15 @@
   </li>
 
   <% end %>
-</ul>
 
 <% else %>
 
-<p>There are no tasks yet!</p>
+<p id="errors">There are no tasks yet!</p>
 
 <% end %>
+</ul>
 
-<p><%= link_to "Add a task", new_list_task_path(@list) %></p>
+<p><%= link_to "Add a task", new_list_task_path(@list), id: "new_link", remote: true %></p>
 
 
 <p><%= link_to "Edit List", edit_list_path(@list) %></p>
